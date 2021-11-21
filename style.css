@@ -1,0 +1,20 @@
+body{
+    background-color: darkgrey;
+}
+
+img{
+    width: 180px;
+    height: 180px;
+}
+
+.div1{
+    float: right;
+}
+
+.div2{
+    float: right;
+}
+
+.div3{
+    float: right;
+}

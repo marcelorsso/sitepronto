@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Marbi Store</title>
+  <script src="https://unpkg.com/vue"></script>
+  <link rel="stylesheet" type="text/css" href="style.css" media="screen">
+</head>
+<body>
+  
+    
+    <form>
+        <div id="div1">
+          <img src="images/00000.png">
+          <button type = "submit"> R$ 99,00 </button>
+        </div>
+      </form>
+
+      <form>
+        <div id="div2">
+          <img src="images/000002.jpg">
+          <button type = "submit" > R$ 130,00 </button>
+        </div>
+      </form>
+
+      <form>
+        <div id="div3">
+          <img src="images/00001.jpg">
+          <button type = "submit"> R$ 85,00 </button>
+        </div>
+      </form>
+
+  <div id="app-calc">
+    <p>Preço da primeira roupa escolhida: {{n1}}</p>
+    <p>Preço da segunda roupa escolhida: {{n2}}</p>
+    <p>Preço da terceira roupa escolhida: {{n3}}</p>
+    
+    
+    <p>Valor Final: {{ result }}</p>
+
+    <input v-model.number="n1" type="number">
+    <input v-model.number="n2" type="number">
+    <input v-model.number="n3" type="number">
+
+    <button v-on:click="sumFunction">Somar</button>
+
+    
+  </div>
+
+  <script>
+    var app7 = new Vue({
+        el: '#app-calc',
+        data: {
+            n1: 0,
+            n2: 0,
+            n3: 0,
+            result:0
+        },
+        methods: {
+          sumFunction: function () {
+              this.result = this.n1 + this.n2 + this.n3;
+          }
+       }
+    })
+  </script>
+</body>
+</html> 
